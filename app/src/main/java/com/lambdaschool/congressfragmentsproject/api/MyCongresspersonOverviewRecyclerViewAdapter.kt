@@ -6,10 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.lambdaschool.congressfragmentsproject.R
-
-
 import com.lambdaschool.congressfragmentsproject.api.CongresspersonOverviewFragment.OnListFragmentInteractionListener
-
 import kotlinx.android.synthetic.main.fragment_congresspersonoverview.view.*
 
 /**
@@ -26,7 +23,7 @@ class MyCongresspersonOverviewRecyclerViewAdapter(
 
     init {
         mOnClickListener = View.OnClickListener { v ->
-            val item = v.tag as CongresspersonDetails
+            val item = v.tag as CongresspersonOverview
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
             mListener?.onListFragmentInteraction(item)

@@ -13,6 +13,7 @@ import com.lambdaschool.congressfragmentsproject.R
 
 import com.lambdaschool.congressfragmentsproject.api.dummy.DummyContent
 import com.lambdaschool.congressfragmentsproject.api.dummy.DummyContent.DummyItem
+import org.json.JSONObject
 
 /**
  * A fragment representing a list of Items.
@@ -47,7 +48,7 @@ class CongresspersonOverviewFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyCongresspersonOverviewRecyclerViewAdapter(CongresspersonDetails., listener)
+                adapter = MyCongresspersonOverviewRecyclerViewAdapter(CongressDao.allMembers , listener)
             }
         }
         return view
@@ -80,7 +81,7 @@ class CongresspersonOverviewFragment : Fragment() {
      */
     interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: CongresspersonDetails?)
+        fun onListFragmentInteraction(item: CongresspersonOverview?)
     }
 
     companion object {
